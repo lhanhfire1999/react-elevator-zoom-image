@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.scss'
+import { ElevatorZoomImage, ProductDetailInfo } from './components'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container">
+      <div className="row">
+        <div className="col-6">
+          <ElevatorZoomImage
+            imageId="product-01"
+            imageUrl="/images/product-01.svg"
+            imageName="product-01"
+          />
+        </div>
+        <div className="col-6">
+          <ProductDetailInfo />
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
